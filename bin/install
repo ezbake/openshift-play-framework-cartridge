@@ -1,0 +1,8 @@
+#!/bin/bash -eu
+
+case "$1" in
+      -v|--version) version="$2"
+esac
+
+export JAVA_HOME=/etc/alternatives/jre_1.7.0
+echo "$JAVA_HOME" > ${OPENSHIFT_PLAY_FRAMEWORK_DIR}/env/JAVA_HOME
